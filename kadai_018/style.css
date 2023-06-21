@@ -1,0 +1,79 @@
+#top {
+  width: 800px;
+  background-color: #dcc9f4;
+  margin: 20px 0px; 
+  text-align: center;
+}
+
+.top-child {
+  width: 20%;
+  background-color: #ffd9df;
+  display: inline-block;
+}
+
+#middle {
+  width: 800px;
+  height: 800px;
+  margin: 20px 0px;
+  background-color: #ffd9df;
+  position : relative;
+}
+
+#middle-child01, #middle-child02, #middle-child03{
+  width: 200px;
+  height: 200px;
+  background-color: #87ceeb;
+}
+
+#middle-child01 {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+#middle-child02 {
+  position: absolute;
+  top: 300px;
+  left: 300px;
+}
+
+#middle-child03 {
+  position: absolute;
+  top: 500px;
+  left: 500px;
+}
+
+#bottom {
+  width: 800px;
+  height: 300px;
+  background-color: #87ceeb;
+  left: auto;
+  right: auto;
+  /* left right→autoで中央揃えに */
+  position: relative;
+}
+
+#bottom-child01, #bottom-child02 , #bottom-child03 {
+  width: 400px;
+  height: 100px;
+  background-color: #e5dcf0;
+}
+
+#bottom-child02 {
+  position: absolute;
+  left: 200px;
+  top: 100px 
+}
+
+
+#bottom-child03 {
+  position: absolute;
+  left: 400px;
+  bottom: 0px;
+}
+/* absoluteを使うと、他のabsoluteも認識しなくなるため、
+child02の下にあると思わず、absoluteを用いていないchild01の下にあると
+認識したほうがいい。よって、child02・child03いずれもtopやbottomで高さを指定したほうがいい */
+
+/* 別解：style1シート
+positionでなく、marginで指定*/
